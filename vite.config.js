@@ -3,13 +3,9 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/sowjanyadevakumar.com/', // Replace with your GitHub repository name
-  server: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5001',
-        changeOrigin: true
-      }
-    }
+  base: '/', // Changed from repository name to root
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets'
   }
 })
